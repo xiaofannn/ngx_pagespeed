@@ -151,6 +151,10 @@ RewriteOptions* NgxRewriteDriverFactory::NewRewriteOptions() {
   return options;
 }
 
+RewriteOptions* NgxRewriteDriverFactory::NewRewriteOptionsForQuery() {
+  return new NgxRewriteOptions(thread_system());
+}
+
 bool NgxRewriteDriverFactory::CheckResolver() {
   if (use_native_fetcher_ && resolver_ == NULL) {
     return false;

@@ -65,6 +65,7 @@ class NgxRewriteDriverFactory : public SystemRewriteDriverFactory {
   // Create a new RewriteOptions.  In this implementation it will be an
   // NgxRewriteOptions.
   virtual RewriteOptions* NewRewriteOptions();
+  virtual RewriteOptions* NewRewriteOptionsForQuery();
   virtual ServerContext* NewDecodingServerContext();
   // Check resolver configured or not.
   bool CheckResolver();
